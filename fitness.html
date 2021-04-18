@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fitness.css">
+    <link rel="stylesheet" href="modal.css">
+    <link rel="stylesheet" href="stories.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <title>Fitness</title>
+</head>
+
+<body>
+    <!--header section-->
+    <div class="header">
+        <div class="container">
+            <div class="header_inner">
+                <div class="header_logo">EasyBoost</div>
+
+                <!--модальное окно-->
+                <a href='#' class='modal-btn'>Log In / Sign Up</a>
+
+                <div class='modal'>
+                    <div class='close'>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class='options'>
+                        <a href='#' class='active'>Log In</a>
+                        <a href='#'>Sign Up</a>
+                    </div>
+                    <div class='wrapper'>
+                        <div class='content'>
+                            <div class='inner'>
+                                <div class='side'>
+                                    <form action="action_page.php">
+                                        <div class="container">
+                                        <h1>Log In</h1>
+                                        <p>Already Signed Up?</p>
+                                        <hr>
+                                    
+                                        <label for="email"><b>Email</b></label>
+                                        <input type="text" placeholder="Enter Email" name="email" required>
+                                    
+                                        <label for="psw"><b>Password</b></label>
+                                        <input type="password" placeholder="Enter Password" name="psw" required>
+                                        <button type="submit" class="loginbtn">Log In</button>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class='side'>
+                                    <form action="action_page.php">
+                                        <div class="container">
+                                        <h1>Register</h1>
+                                    
+                                        <label for="email"><b>Email</b></label>
+                                        <input type="text" placeholder="Enter Email" name="email" required>
+                                    
+                                        <label for="psw"><b>Password</b></label>
+                                        <input type="password" placeholder="Enter Password" name="psw" required>
+                                    
+                                        <label for="psw-repeat"><b>Repeat Password</b></label>
+                                        <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+                                        <hr>
+                                    
+                                        <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+                                        <button type="submit" class="registerbtn">Register</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class='overlay'></div>
+                    
+
+                <div class="header_socials">
+                    <a class="socials_nav" href=""><i class="fab fa-facebook"></i></a>
+                    <a class="socials_nav" href=""><i class="fab fa-linkedin"></i></a>
+                    <a class="socials_nav" href=""><i class="fab fa-google-plus-square"></i></a>
+                    <button class="header_button" type="button"><i class="fas fa-bars"></i></button>
+                </div>   
+            </div>
+        </div>
+    </div>
+
+    <!--intro section-->
+    <div class="intro">
+        <div class="container">
+            <div class="intro_inner">
+                
+                <div class="intro_text">
+                    <div class="intro_title">The best
+                        fitness tracker!</div>
+                    <div class="intro_subtitle">Nisi ullamco tempor tempor nulla labore ad labore sit eu duis. <br>Ut et esse cupidatat consequat ea exercitation.</div>
+                    <div class="intro_link">
+                        <a class="link_apple" href=""><i class="fab fa-app-store-ios link"></i>Download</a>
+                        <a class="link_android" href=""><i class="fab fa-google-play link"></i>Download</a>
+                    </div>
+                </div>
+
+                <div class="intro_pct">
+                    <img class="intro_img" src="img/Illustration.png" alt="">
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!--about text section-->
+    <div class="about">
+        <div class="container">
+            <div class="about_title">About text</div>
+            <div class="about_subtitle">Nisi ullamco tempor tempor nulla labore ad labore sit eu duis. <br>Ut et esse cupidatat consequat.</div>
+
+            <!--slider-->
+            <div class="ant-carousel">
+                <div class="ant-carousel-hider">
+                    <ul class="ant-carousel-list">
+                        <li class="ant-carousel-element">
+                            <div class="carousel_card">
+                                <div class="card_icon"><i class="fas fa-child"></i></div>
+                                <div class="card_title">Ivan Borvanov</div>
+                            </div>
+                            <div class="card_text">Nisi ullamco tempor tempor nulla labore ad labore sit eu duis.</div>
+                        </li>
+                        <li class="ant-carousel-element">
+                            <div class="carousel_card">
+                                <div class="card_icon"><i class="fas fa-child"></i></div>
+                                <div class="card_title">Zhanna Yuryeva</div>
+                            </div>
+                            <div class="card_text">Nisi ullamco tempor tempor nulla labore ad labore sit eu duis.</div>
+                        </li>
+                        <li class="ant-carousel-element">
+                            <div class="carousel_card">
+                                <div class="card_icon"><i class="fas fa-child"></i></div>
+                                <div class="card_title">Anton Borvanov</div>
+                            </div>
+                            <div class="card_text">Nisi ullamco tempor tempor nulla labore ad labore sit eu duis.</div>
+                        </li>
+                        <li class="ant-carousel-element">
+                            <div class="carousel_card">
+                                <div class="card_icon"><i class="fas fa-child"></i></div>
+                                <div class="card_title">Pavel Blinderov</div>
+                            </div>
+                            <div class="card_text">Nisi ullamco tempor tempor nulla labore ad labore sit eu duis.</div>
+                        </li>
+                        <li class="ant-carousel-element">
+                            <div class="carousel_card">
+                                <div class="card_icon"><i class="fas fa-child"></i></div>
+                                <div class="card_title">Neymar</div>
+                            </div>
+                            <div class="card_text">Nisi ullamco tempor tempor nulla labore ad labore sit eu duis.</div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="ant-carousel-arrow-left"></div>
+                <div class="ant-carousel-arrow-right"></div>
+                <div class="ant-carousel-dots"></div>
+              </div>
+        
+        </div>
+    </div>
+
+    <!--start training srction-->
+    <div class="training">
+        <div class="container">
+            <div class="training_content">
+                <div class="training_inner">
+                    <div class="training_title">Start training already on your watch</div>
+                    <div class="trainig_text">Nisi ullamco tempor tempor nulla labore ad labore sit eu duis. Ut et esse cupidatat consequat.Nisi ullamco tempor tempor nulla labore ad labore sit eu duis. Ut et esse cupidatat consequat.</div>
+                    <div class="training_email">
+                        <input type="email" name="email" placeholder="Email">
+                        <button class="email_btn" type="button" >Let's Go!</button>
+                    </div>
+                </div>
+
+                <img class="training_img" src="img/clock.png" alt="clock">
+            </div>
+        </div>
+    </div>
+
+    <!--stories-->
+    <div class="stories">
+        <div class="container">
+            <div class="stories_title">Stories of our users</div>
+            <div class="stories_inner">
+                <div class="story">
+
+                    <img class="story_img" src="img/stories/football.jpg" alt="#">
+
+                    <div class="story_title">Stories of our users</div>
+                    <div class="story_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </div>
+                    <div class="story_date">17.10.20</div>
+                    <button class="story_btn" type="button">Read more...</button>
+
+                </div>
+
+                <div class="story">
+
+                    <img class="story_img" src="img/stories/basketball.jpg" alt="#">
+
+                    <div class="story_title">Stories of our users</div>
+                    <div class="story_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </div>
+                    <div class="story_date">25.10.20</div>
+                    <button class="story_btn" type="button">Read more...</button>
+                </div>
+                
+                <div class="story">
+                    <p class="add_story">Add your story here</p>
+                    
+                    <form class="action_page" action="/action_page.php">
+                        
+                        <!-- <label for="subject">Message</label> -->
+                        <textarea id="subject" name="subject" placeholder="Write something.." maxlength="800" rows="8"></textarea>
+                        <p>Write your name</p>
+                        
+                        <!-- <label for="name">Full Name</label> -->
+                        <input type="text" id="fname" name="fullname" placeholder="Name">
+                        
+                        <!-- <label for="date">Date</label> -->
+                        <input type="date" id="date" name="date" placeholder="When did it happen">
+                        
+                    </form>
+
+                    <button class="add_story_btn" type="button">Send</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--tariff plan-->
+    <div class="tariff">
+        <div class="container">
+            <div class="tariff_title">Choose your tariff plan</div>
+            
+            <div class="form_radio_group">
+                <div class="form_radio_group-item">
+                    <input id="radio-1" type="radio" name="radio" value="1" checked>
+                    <label for="radio-1">Month</label>
+                </div>
+                <div class="form_radio_group-item">
+                    <input id="radio-2" type="radio" name="radio" value="2">
+                    <label for="radio-2">Years</label>
+                </div>
+            </div>
+
+            <div class="tariff_inner">
+                <div class="tariff_plan">
+                    <div class="plan_card">
+                        <div class="plan_title">Free Plan</div>
+                        <div class="plan_cost">$0 mounth</div>
+                        <div class="plan_menu">
+                            <p>5 Email</p>
+                            <p>Free Share</p>
+                            <p>200 Clients</p>
+                            <p>Chat support</p>
+                        </div>
+                        <button class="plan_btn">Get started</button>
+                    </div>
+                </div>
+                <div class="tariff_plan">
+                    <div class="plan_card">
+                        <div class="plan_title">Basic</div>
+                        <div class="plan_cost">$5 mounth</div>
+                        <div class="plan_menu">
+                            <p>200 Email</p>
+                            <p>Free Share</p>
+                            <p>500 Clients</p>
+                            <p>Chat + Email support</p>
+                        </div>
+                        <button class="plan_btn">Get started</button>
+                    </div>
+                </div>
+                <div class="tariff_plan">
+                    <div class="plan_card">
+                        <div class="plan_title">Advenced</div>
+                        <div class="plan_cost">$9 mounth</div>
+                        <div class="plan_menu">
+                            <p>2 000 Email</p>
+                            <p>Free Share</p>
+                            <p>1 000 Clients</p>
+                            <p>Chat + Email support</p>
+                        </div>
+                        <button class="plan_btn">Get started</button>
+                    </div>
+                </div>
+                <div class="tariff_plan">
+                    <div class="plan_card">
+                        <div class="plan_title">Most Advanced</div>
+                        <div class="plan_cost">$12 mounth</div>
+                        <div class="plan_menu">
+                            <p>Unlim Email</p>
+                            <p>Free Share</p>
+                            <p>10 000 Clients</p>
+                            <p>Personal Manager</p>
+                        </div>
+                        <button class="plan_btn">Get started</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--register-->
+    <div class="account">
+        <div class="container">
+            <div class="account_inner">
+
+                <div class="download">
+                    <div class="download_title">Download now
+                        and get a bonus!</div>
+                    <div class="download_text">Nisi ullamco tempor tempor nulla labore ad labore sit eu duis. Ut et esse cupidatat consequat ea exercitation.</div>
+                    <div class="download_btns">
+                        <button class="download_btn" type="button"><i class="fab fa-app-store-ios btn_icon"></i>Download</button>
+                        <button class="download_btn" type="button"><i class="fab fa-google-play btn_icon"></i>Download</button>
+                    </div>
+                </div>
+
+                <!--download form-->
+                <form action="action_page.php">
+                    <div class="container">
+                    <h1>Register</h1>
+                    <p>Please fill in this form to create an account.</p>
+                    <hr>
+                
+                    <label for="email"><b>Email</b></label>
+                    <input type="text" placeholder="Enter Email" name="email" required>
+                
+                    <label for="psw"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="psw" required>
+                
+                    <label for="psw-repeat"><b>Repeat Password</b></label>
+                    <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+                    <hr>
+                
+                    <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+                    <button type="submit" class="registerbtn">Register</button>
+                    </div>
+                
+                    <div class="container signin">
+                        <p>Already have an account? <a href="#">Sign in</a>.</p>
+                    </div>
+                </form>
+
+            </div>
+            
+        </div>
+    </div>
+
+    <!--footer-->
+    <div class="footer">
+        <div class="container">
+            <div class="footer_inner">
+                <div class="footer_logo">EasyBoost</div>
+                <div class="footer_menu">
+                    <a class="footer_a" href="#">About</a>
+                    <a class="footer_a" href="#">Pricing</a>
+                    <a class="footer_a" href="#">Manual</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/stories.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="js/modal.js"></script>
+    
+</body>
+</html>

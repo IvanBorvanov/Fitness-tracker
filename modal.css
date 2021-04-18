@@ -1,0 +1,330 @@
+.overlay {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, .7);
+  z-index: 100;
+  opacity: 0;
+  pointer-events: none;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.overlay.active {
+  opacity: 1;
+  pointer-events: inherit;
+}
+
+/*кнопка*/
+a.modal-btn {
+  font-family: Montserrat;
+  font-style: normal;
+  font-size: 15px;
+  display: inline-block;
+  padding: 10px 20px;
+  background: #F95A2C;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  
+  transition: 0.2s ease-in-out;
+}
+
+a.modal-btn:hover {
+  background: white;
+  color: #000;
+  box-shadow: 0px 0px 25px 1px rgba(0, 0, 0, 0.5);
+}
+
+.modal {
+  width: calc(100% - 40px);
+  max-width: 800px;
+  height: calc(100vh - 100px);
+  max-height: 600px;
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.35);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  pointer-events: none;
+  background: #e5e5e5;
+  transition: 0.2s ease-in-out;
+  z-index: 500;
+}
+
+.modal.active {
+  opacity: 1;
+  pointer-events: inherit;
+}
+
+.modal .close {
+  widtH: 30px;
+  height: 30px;
+  position: absolute;
+  top: 30px;
+  left: -15px;
+  transform: translate(-100%, -100%);
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+/*значок закрыть*/
+.modal .close span {
+  display: block;
+  width: 30px;
+  height: 3px;
+  background: #F95A2C;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+
+.modal .close span:first-child {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.modal .close span:last-child {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.modal .wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: relative;
+}
+
+.modal .wrapper:after {
+  content: "";
+  font-family: Montserrat;
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s ease-in-out;
+  background: #e5e5e5;
+  color: #000;
+}
+
+.modal .wrapper:before {
+  content: "";
+  font-family: Montserrat;
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #e5e5e5;
+  transition: 0.2s ease-in-out;
+  color: #000;
+}
+
+.modal .wrapper.switch .content {
+  transform: translate(100%, 0);
+}
+
+.modal .wrapper.switch .content .inner {
+  transform: translate(-50%, 0);
+}
+
+.modal .wrapper .content {
+  width: 50%;
+  height: 100%;
+  background: white;
+  position: relative;
+  overflow: hidden;
+  transition: 0.7s cubic-bezier(0.42, 0, 0.02, 1.21);
+  z-index: 100;
+}
+
+.modal .wrapper .content .inner {
+  width: 200%;
+  height: 100%;
+  position: absolute;
+  transition: 0.7s cubic-bezier(0.42, 0, 0.02, 1.21);
+  top: 0;
+  left: 0;
+  display: flex;
+}
+
+.modal .wrapper .content .inner .side {
+  width: 50%;
+  height: 100%;
+  overflow: auto;
+  padding: 10px;
+  display: flex;
+  
+  justify-content: center;
+  align-items: center;
+}
+
+.modal .wrapper .content .inner .side form .field label {
+  font-family: Montserrat;
+  font-size: 15px;
+}
+.modal .wrapper .content .inner .field input[type=submit] {
+  font-family: Montserrat;
+  font-size: 20px;
+  padding: 5px 20px;
+
+  border: 2px solid #000;
+  border-radius: 10px;
+  box-shadow: 0 5px 0 #000;
+
+  background: #F95A2C;
+  color: #000;
+  transition: 0.15s ease-in-out;
+  cursor: pointer;
+}
+
+.modal .wrapper .content .inner  .field input[type=submit]:hover {
+  background: #1BDBC4;
+  color: #fff;
+}
+
+.modal .wrapper .content .inner  .field input[type=text], .modal .wrapper .content .inner .side .field input[type=password], .modal .wrapper .content .inner .side form .field input[type=email] {
+  font-family: Montserrat;
+  width: 100%;
+  font-size: 20px;
+  outline: none;
+  border: 1px solid #000;
+  background: none;
+  transition: 0.2s ease-in-out;
+}
+
+.modal .wrapper .content .inner .side form .field input[type=text]:focus, .modal .wrapper .content .inner .side form .field input[type=password]:focus, .modal .wrapper .content .inner .side form .field input[type=email]:focus {
+  background-color: #e5e5e5;
+}
+
+.modal .options {
+  display: flex;
+}
+
+.modal .options a {
+  width: 100%;
+  padding: 10px;
+  font-family: Permanent Marker;
+  font-size: 20px;
+  text-align: center;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+
+  transition: 0.2s ease-in-out;
+}
+
+.modal .options a:hover {
+  color: #F95A2C;
+}
+
+.modal .options a.active {
+  z-index: 100;
+  background: #F95A2C;
+  color: #000;
+}
+
+label {
+  color: #000;
+} */
+
+.modal .options {
+  display: flex;
+}
+
+.modal .options a {
+  width: 100%;
+  padding: 10px;
+  font-family: Permanent Marker;
+  font-size: 20px;
+  text-align: center;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white;
+
+  transition: 0.2s ease-in-out;
+}
+
+.modal .options a:hover {
+  color: #F95A2C;
+}
+
+.modal .options a.active {
+  z-index: 100;
+  background: #F95A2C;
+  color: #000;
+}
+
+.loginbtn {
+  background-color: #FA6648;
+  padding: 10px 20px;
+  margin: 8px 0;
+  border: 2px solid #000;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 100%;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 100%;
+  text-align: center;
+  letter-spacing: 0.45px;
+  color: #FFFFFF;
+  margin-bottom: 30px;
+  box-shadow: 0 5px 0 #000;
+
+  transition: background-color 0.2s linear;
+}
+
+.loginbtn:hover {
+  background-color: #7711DD;
+}
+
+.registerbtn {
+  background-color: #FA6648;
+  padding: 10px 20px;
+  margin: 8px 0;
+  border: 2px solid #000;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 100%;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 100%;
+  text-align: center;
+  letter-spacing: 0.45px;
+  color: #FFFFFF;
+  margin-bottom: 30px;
+  box-shadow: 0 5px 0 #000;
+
+  transition: background-color 0.2s linear;
+}
+
+.registerbtn:hover {
+  background-color: #7711DD;
+}
+
+
+
